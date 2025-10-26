@@ -5,11 +5,11 @@ async function seed() {
   await prisma.user.createMany({
     data: [
       {
-        name: "Pedro",
-        email: "pedro@example.com",
+        name: "Micheal",
+        email: "nike@example.com",
         age: 28,
         isMarried: false,
-        nationality: "Brazilian",
+        nationality: "Nigerian",
       },
       {
         name: "Caroline",
