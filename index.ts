@@ -41,11 +41,16 @@ app.put("/users", async (_, res) => {
   }
 });
 
-app.delete("/users", async (_, res) => {
+app.delete("/users", async (req, res) => {
+  const id = req.body?.id;
+  if (!id) {
+    res.status(400).json({ error: "User ID is required" });
+    return;
+  }
 
   try {
     const deletedUsers = await prisma.user.deleteMany({
-      where: { age: { gt: 40 } },
+      where: { age: { gt: id } },
     });
     res.json(deletedUsers);
   } catch (error) {
