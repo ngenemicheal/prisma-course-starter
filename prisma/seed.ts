@@ -6,8 +6,8 @@ async function seed() {
     data: [
       {
         name: "Micheal",
-        email: "nike@example.com",
-        age: 28,
+        email: "mike@example.com",
+        age: 26,
         isMarried: false,
         nationality: "Nigerian",
       },
